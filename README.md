@@ -1,8 +1,6 @@
 Macos install
 -------------
 
-.. code-block:: shell
-
                 $ brew install node
                 $ node -v
                 v14.1.0
