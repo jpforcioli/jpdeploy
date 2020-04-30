@@ -30,6 +30,7 @@ const Form = () => {
 												className={`input ${errors.site_id && `is-danger`}`}
 												type="text" name="site_id"
 												onChange={handleChange}
+												maxLength="5"
 												value={values.site_id || ''}
 											/>
 											<span className="icon is-small is-left">
@@ -48,6 +49,7 @@ const Form = () => {
 												type="text"
 												name="fortigate_sn"
 												onChange={handleChange}
+												maxLength="16"
 												value={values.fortigate_sn || ''}
 											/>
 											<span className="icon is-small is-left">
@@ -66,6 +68,7 @@ const Form = () => {
 												type="text"
 												name="fortiswitch_sn"
 												onChange={handleChange}
+												maxLength="16"
 												value={values.fortiswitch_sn || ''}
 											/>
 											<span className="icon is-small is-left">

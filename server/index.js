@@ -18,9 +18,7 @@ app.get('/deploy/', (req, res) => {
     const fortigate_sn = req.query.fortigate_sn;
     const fortiswitch_sn = req.query.fortiswitch_sn;
 
-    const now = moment().format('YYYYMMDDHHmmssSS');
-
-    const command = child.spawn("find", ["/usr/bin"]);
+    const command = child.spawn("server/test.sh", [site_id, fortigate_sn, fortiswitch_sn]);
 
     command.stdout.on('data', (data) => {
         res.write('' + data);
