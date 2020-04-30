@@ -95,7 +95,7 @@ const Form = () => {
 			{terminalIsOn && (
 				<div className="modal is-active">
 					<div className="modal-background"></div>
-					<div className="modal-content container">
+					<div className="modal-content container is-fluid">
 						<ScrollFollow
 							startFollowing={true}
 							render={({ follow, onScroll }) => (

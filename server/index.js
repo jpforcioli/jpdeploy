@@ -20,9 +20,13 @@ app.get('/deploy/', (req, res) => {
 
     const now = moment().format('YYYYMMDDHHmmssSS');
 
-    const command = child.spawn("find", ["/"]);
+    const command = child.spawn("find", ["/usr/bin"]);
 
     command.stdout.on('data', (data) => {
+        res.write('' + data);
+    })
+
+    command.stdout.on('error', (data) => {
         res.write('' + data);
     })
 })
