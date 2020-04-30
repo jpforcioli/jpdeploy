@@ -1,3 +1,32 @@
+Macos install
+-------------
+
+.. code-block:: shell
+
+                $ brew install node
+                $ node -v
+                v14.1.0
+                $ npm -v
+                6.14.4
+                $ mkdir ~/tmp/jpdeploy
+                $ cd ~/tmp/jpdeploy
+                $ git clone https://github.com/pforciol/jpdeploy.git
+                $ cd ~/tmp/jpdeploy/jpdeloy
+                $ sudo chown -R $USER:$(id -gn $USER) /Users/jpforcioli/.npm
+                $ sudo chown -R $USER:$(id -gn $USER) /Users/jpforcioli/.config
+                $ npm install
+                npm ERR! cb() never called!
+
+                npm ERR! This is an error with npm itself. Please report this error at:
+                npm ERR!     <https://npm.community>
+
+                npm ERR! A complete log of this run can be found in:
+                npm ERR!     /Users/jpforcioli/.npm/_logs/2020-04-30T18_04_40_870Z-debug.log    
+
+                $ npm install npm-run-all --save-dev
+                $ touch .env
+                $ npm run dev
+                
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
